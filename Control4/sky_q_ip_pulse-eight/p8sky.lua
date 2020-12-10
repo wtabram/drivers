@@ -69,7 +69,7 @@ function P8INT:TURN_OFF()
 		 if responseCode == 200 then
 			local jsonResponse = JSON:decode(strData)
 			if (jsonResponse.activeStandby) then
-				LogInfo("Sky Q is already of, ignoring Turn Off Request")
+				LogInfo("Sky Q is already off, ignoring Turn Off Request")
 			else
 				LogInfo("Powering Sky Q Off")
 				P8INT:SEND_KEY(0)
